@@ -1,0 +1,11 @@
+<h1>Welcome!</h1>
+<button (click)="butClick($event)">
+    <ng-container *ngIf="show">Hide</ng-container>
+    <ng-container *ngIf="!show">Show</ng-container>
+    Togle
+</button>
+<div *ngFor="let user of users">
+    <app-list-item [user]="user" [show]="show"></app-list-item>
+</div>
+
+<app-list-item></app-list-item>
